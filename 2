@@ -1,0 +1,42 @@
+import React from 'react';
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
+import './App.css';
+
+function App() {
+  const title = "Welcome to My React App";
+  const tagline = "Building great apps with React";
+  const copyright = "© 2025 MyReactApp. All rights reserved.";
+
+  return (
+    <div className="App">
+      <Header title={title} />
+      <Footer tagline={tagline} copyright={copyright} />
+    </div>
+  );
+}
+
+export default App;
+
+HEADER.JSX
+import React from 'react';
+
+const Header = ({ title }) => (
+  <header>
+    <h1>{title}</h1>
+  </header>
+);
+
+export default Header;
+
+FOOTER.JSX
+import React from 'react';
+
+const Footer = ({ tagline, copyright }) => (
+  <footer>
+    <p>{tagline}</p>
+    <p>{copyright}</p>
+  </footer>
+);
+
+export default Footer;
